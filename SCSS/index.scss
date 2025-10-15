@@ -1,0 +1,65 @@
+$primary-color: red;
+$font-stack: 'Open Sans', sans-serif;
+$header-color: aqua;
+$body-color: gray;
+
+
+body {
+    background: $body-color;
+    font-family: $font-stack;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
+}
+
+header {
+    height: 10vh;
+    background-color: $header-color;
+    display: flex; // ✅ pour activer flexbox sur le header
+    align-items: center;
+    justify-content: center;
+    nav {
+        display: flex; // ✅ flex aussi sur la nav
+        justify-content: center; // ✅ pour centrer le contenu
+        align-items: center;
+        gap: 1rem; // ✅ "3" tout seul n’est pas une valeur valide, donc on met une unité (ex: rem ou px)
+
+        a {
+            text-decoration: none;
+            color: $primary-color; // ✅ couleur par défaut
+            font-weight: bold;
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    height: 10vh;
+    background-color: $header-color;
+    display: flex;
+    align-items: flex-end;
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+}
